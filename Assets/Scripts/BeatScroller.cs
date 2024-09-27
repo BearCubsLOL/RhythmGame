@@ -14,6 +14,6 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Notes.transform.position(0f, NoteSpeed * Time.deltaTime, 0f);
+        Notes.transform.position -= new Vector3(NoteSpeed * Time.deltaTime, 0f, 0f);
     }
 }
