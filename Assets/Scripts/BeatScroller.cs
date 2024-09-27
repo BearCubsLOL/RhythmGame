@@ -1,9 +1,14 @@
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class BeatScroller : MonoBehaviour
 {
-    public float NoteSpeed = 50f;
-    public GameObject Notes;
+    [SerializeField]
+    private float NoteSpeed = 50f;
+    [SerializeField]
+    private GameObject Notes;
+
+    public bool gameActive = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +19,13 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Notes.transform.position -= new Vector3(NoteSpeed * Time.deltaTime, 0f, 0f);
+        if (gameActive)
+        {
+            Notes.transform.position -= new Vector3(NoteSpeed * Time.deltaTime, 0f, 0f);
+        }
+        else
+        {
+
+        }
     }
 }
