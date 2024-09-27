@@ -351,8 +351,11 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.46f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.46f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
+"Assets/Scripts/BeatPlayer.cs"
 "Assets/Scripts/BeatScroller.cs"
 "Assets/Scripts/Countdown.cs"
+"Assets/Scripts/Note.cs"
+"Assets/Scripts/TriggerChecker.cs"
 -langversion:9.0
 /deterministic
 /optimize+

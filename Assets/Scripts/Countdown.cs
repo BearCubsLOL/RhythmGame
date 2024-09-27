@@ -4,15 +4,15 @@ using UnityEngine;
 public class Countdown : MonoBehaviour
 {
 
-    public TextMeshProUGUI CountdownText;
-    public GameObject GameManager;
+    public TextMeshProUGUI countdownText;
+    public GameObject gameManager;
 
     void Number(string currentNum)
     {
-        CountdownText.text = currentNum;
+        countdownText.text = currentNum;
         if (currentNum == "Start!")
         {
-            GameManager.GetComponent<BeatScroller>().gameActive = true;
+            gameManager.GetComponent<BeatScroller>().gameActive = true;
         }
     }
 }
