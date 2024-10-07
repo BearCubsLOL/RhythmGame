@@ -12,16 +12,19 @@ public class Note : MonoBehaviour
     private GameObject gameManager;
     private bool alreadyRan = false;
     private float distance = 0f;
-    private float idkrn = 5.00f;
+    private float centerOfBoard = 5.00f;
     [SerializeField]
     private GameObject UI;
     [SerializeField]
     private GameObject note;
+    [SerializeField]
+    private GameObject top;
 
     private int perfectPlusScore = 1000;
     private int perfectScore = 800;
     private int greatScore = 600;
     private int goodScore = 500;
+
 
     void OnTriggerEnter(Collider col)
     {
@@ -35,7 +38,14 @@ public class Note : MonoBehaviour
         if (col.gameObject == trigger)
         {
             canBePressed = false;
-            Debug.Log("Miss");
+            if (!wasPressed)
+            {
+                Debug.Log("Miss");
+            }
+            else
+            {
+
+            }
             Object.Destroy(note);
         }
     }
@@ -67,32 +77,33 @@ public class Note : MonoBehaviour
             if (wasPressed && !alreadyRan)
             {
                 alreadyRan = true;
-                distance = idkrn - transform.position.x;
+                distance = centerOfBoard - transform.position.x;
                 distance = Mathf.Abs(distance);
+                
+
                 if (distance <= 0.25)
                 {
                     Debug.Log("Perfect+");
                     UI.GetComponent<UI>().score += perfectPlusScore;
-                    Object.Destroy(note);
+                    //Animation.Play("Note Press");
                 }
                 else if (distance > 0.25 && distance <= 0.5)
                 {
                     Debug.Log("Perfect");
                     UI.GetComponent<UI>().score += perfectScore;
-                    Object.Destroy(note);
+                    
                 }
                 else if (distance > 0.5 && distance <= 0.75)
                 {
                     Debug.Log("Great");
                     UI.GetComponent<UI>().score += greatScore;
-                    Object.Destroy(note);
-
+                    
                 }
                 else if (distance > 0.75)
                 {
                     Debug.Log("Good");
                     UI.GetComponent<UI>().score += goodScore;
-                    Object.Destroy(note);
+                    
                 }
             }
         }
