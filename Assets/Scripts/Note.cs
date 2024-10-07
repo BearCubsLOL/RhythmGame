@@ -15,6 +15,8 @@ public class Note : MonoBehaviour
     private float idkrn = 5.00f;
     [SerializeField]
     private GameObject UI;
+    [SerializeField]
+    private GameObject note;
 
     private int perfectPlusScore = 1000;
     private int perfectScore = 800;
@@ -33,6 +35,8 @@ public class Note : MonoBehaviour
         if (col.gameObject == trigger)
         {
             canBePressed = false;
+            Debug.Log("Miss");
+            Object.Destroy(note);
         }
     }
 
@@ -69,21 +73,26 @@ public class Note : MonoBehaviour
                 {
                     Debug.Log("Perfect+");
                     UI.GetComponent<UI>().score += perfectPlusScore;
+                    Object.Destroy(note);
                 }
                 else if (distance > 0.25 && distance <= 0.5)
                 {
                     Debug.Log("Perfect");
                     UI.GetComponent<UI>().score += perfectScore;
+                    Object.Destroy(note);
                 }
                 else if (distance > 0.5 && distance <= 0.75)
                 {
                     Debug.Log("Great");
                     UI.GetComponent<UI>().score += greatScore;
+                    Object.Destroy(note);
+
                 }
                 else if (distance > 0.75)
                 {
                     Debug.Log("Good");
                     UI.GetComponent<UI>().score += goodScore;
+                    Object.Destroy(note);
                 }
             }
         }
