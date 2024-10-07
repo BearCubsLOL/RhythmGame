@@ -3,9 +3,10 @@ using UnityEngine;
 
 public class Countdown : MonoBehaviour
 {
-
-    public TextMeshProUGUI countdownText;
-    public GameObject gameManager;
+    [SerializeField]
+    private TextMeshProUGUI countdownText;
+    [SerializeField]
+    private GameObject gameManager;
 
     void Number(string currentNum)
     {
