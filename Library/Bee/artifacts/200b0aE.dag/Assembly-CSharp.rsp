@@ -355,7 +355,6 @@
 "Assets/Scripts/BeatScroller.cs"
 "Assets/Scripts/Countdown.cs"
 "Assets/Scripts/Note.cs"
-"Assets/Scripts/TriggerChecker.cs"
 -langversion:9.0
 /deterministic
 /optimize+

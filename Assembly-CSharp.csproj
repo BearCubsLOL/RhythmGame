@@ -64,7 +64,6 @@
     <Compile Include="Assets/Scripts/Countdown.cs" />
     <Compile Include="Assets/Scripts/BeatPlayer.cs" />
     <Compile Include="Assets/Scripts/Note.cs" />
-    <Compile Include="Assets/Scripts/TriggerChecker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Fonts/TextMesh Pro/Shaders/TMPro.cginc" />
