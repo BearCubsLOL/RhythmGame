@@ -2,10 +2,8 @@ using UnityEngine;
 
 public class BeatScroller : MonoBehaviour
 {
-    [SerializeField]
-    private float noteSpeed = 50f;
-    [SerializeField]
-    private GameObject notes;
+    [SerializeField] private float noteSpeed = 50f;
+    [SerializeField] private GameObject notes;
 
     public bool gameActive = false;
 
