@@ -9,11 +9,24 @@ public class UI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI multiplierText;
     [SerializeField] private TextMeshProUGUI streakText;
+    [SerializeField] private GameObject gameManager;
+
+    Animator anim;
+
+    void Start()
+    {
+        anim = gameObject.GetComponent<Animator>();
+    }
 
     void Update()
     {
         scoreText.text = "Score: " + score;
         multiplierText.text = "Multiplier: " + multiplier + "x";
         streakText.text = "Streak: " + streak;
+
+        if (gameManager.GetComponent<BeatScroller>().gameOver)
+        {
+            anim.SetTrigger("Game Over");
+        }
     }
 }

@@ -6,6 +6,7 @@ public class BeatScroller : MonoBehaviour
     [SerializeField] private GameObject notes;
 
     public bool gameActive = false;
+    public bool gameOver = false;
 
     // Update is called once per frame
     void Update()

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Sections
   - Note
+  - Last Note
   layers:
   - Default
   - TransparentFX

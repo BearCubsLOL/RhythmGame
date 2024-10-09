@@ -1,19 +1,18 @@
 ﻿<Properties StartupConfiguration="{36ED1CE3-772E-F3DE-3FE9-21977164E909}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI.cs">
     <Files>
-      <File FileName="Assets/Scripts/Note.cs" Line="63" Column="43" />
-      <File FileName="Assets/Scripts/BeatScroller.cs" Line="12" Column="39" />
-      <File FileName="Assets/Scripts/Countdown.cs" Line="19" Column="2" />
-      <File FileName="Assets/Scripts/UI.cs" Line="5" Column="53" />
+      <File FileName="Assets/Scripts/Note.cs" Line="61" Column="24" />
+      <File FileName="Assets/Scripts/Stats.cs" />
+      <File FileName="Assets/Scripts/BeatScroller.cs" />
+      <File FileName="Assets/Scripts/Countdown.cs" Line="20" Column="2" />
+      <File FileName="Assets/Scripts/UI.cs" Line="21" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Testing" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="UI.cs" selected="True" />
-              </Node>
+            <Node name="Assets" expanded="True" selected="True">
+              <Node name="Scripts" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -22,7 +21,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6ab084c8-696c-46d9-bcad-15e059b73af9" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="adaf0491-8f98-4c91-b324-883b8db4bd5f" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
