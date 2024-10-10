@@ -1,18 +1,21 @@
 ﻿<Properties StartupConfiguration="{36ED1CE3-772E-F3DE-3FE9-21977164E909}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Scene Switcher.cs">
     <Files>
-      <File FileName="Assets/Scripts/Note.cs" Line="61" Column="24" />
-      <File FileName="Assets/Scripts/Stats.cs" />
-      <File FileName="Assets/Scripts/BeatScroller.cs" />
-      <File FileName="Assets/Scripts/Countdown.cs" Line="20" Column="2" />
-      <File FileName="Assets/Scripts/UI.cs" Line="21" Column="1" />
+      <File FileName="Assets/Scripts/Countdown.cs" Line="20" Column="2" IsPinned="True" />
+      <File FileName="Assets/Scripts/Note.cs" Line="39" Column="42" />
+      <File FileName="Assets/Scripts/Stats.cs" Line="18" Column="47" />
+      <File FileName="Assets/Scripts/BeatScroller.cs" Line="5" Column="52" />
+      <File FileName="Assets/Scripts/UI.cs" Line="29" Column="42" />
+      <File FileName="Assets/Scripts/Scene Switcher.cs" Line="15" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Testing" expanded="True">
-            <Node name="Assets" expanded="True" selected="True">
-              <Node name="Scripts" expanded="True" />
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Scene Switcher.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>

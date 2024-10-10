@@ -354,6 +354,7 @@
 "Assets/Scripts/BeatScroller.cs"
 "Assets/Scripts/Countdown.cs"
 "Assets/Scripts/Note.cs"
+"Assets/Scripts/SceneSwitcher.cs"
 "Assets/Scripts/Stats.cs"
 "Assets/Scripts/UI.cs"
 -langversion:9.0

@@ -16,13 +16,10 @@ public class Stats : MonoBehaviour
 
     [SerializeField] private GameObject gameManager;
     [SerializeField] private GameObject stats;
-    [SerializeField] private GameObject theCountdown;
 
-    public void DeactivateUI()
+    void Start()
     {
-        theCountdown.GetComponent<Countdown>().score.SetActive(false);
-        theCountdown.GetComponent<Countdown>().multiplier.SetActive(false);
-        theCountdown.GetComponent<Countdown>().streak.SetActive(false);
+        stats.SetActive(false);
     }
 
     void StatsDisplay()
