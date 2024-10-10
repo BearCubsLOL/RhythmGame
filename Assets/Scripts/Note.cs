@@ -63,7 +63,7 @@ public class Note : MonoBehaviour
         }
     }
 
-    void pressing()
+    void Pressing()
     {
         if (canBePressed)
         {
@@ -90,7 +90,7 @@ public class Note : MonoBehaviour
         }
     }
 
-    void scoreSystem()
+    void ScoreSystem()
     {
         if (wasPressed && !alreadyRan)
         {
@@ -130,7 +130,7 @@ public class Note : MonoBehaviour
         }
     }
 
-    void multiplierSystem()
+    void MultiplierSystem()
     {
         if (UI.GetComponent<UI>().streak >= 3 && UI.GetComponent<UI>().streak < 6)
         {
@@ -156,11 +156,11 @@ public class Note : MonoBehaviour
         {
             UI.SetActive(true);
 
-            pressing();
+            Pressing();
 
-            scoreSystem();
+            ScoreSystem();
 
-            multiplierSystem();
+            MultiplierSystem();
         }
     }   
 }
