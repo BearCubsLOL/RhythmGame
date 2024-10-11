@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main Menu/MainMenu.unity
+    path: Assets/Scenes/Title Screen/TitleScreen.unity
     guid: 871b51e5d463c4725aded56a7c1f7b05
   - enabled: 1
     path: Assets/Scenes/Level Select/Level Select.unity
@@ -14,7 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test Song/TestSong.unity
     guid: 3252ff11066014642bbb38992a8c9b82
-  - enabled: 1
-    path: Assets/Scenes/Asdfghjkl/Asdfghjkl.unity
-    guid: 67d87cd2ba42e412aa97ee880ca7f997
   m_configObjects: {}

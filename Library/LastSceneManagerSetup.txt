@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Test Song/TestSong.unity
+- path: Assets/Scenes/Level Select/Level Select.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
