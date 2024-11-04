@@ -12,6 +12,7 @@ public class Note : MonoBehaviour
     [SerializeField] private GameObject UI;
     [SerializeField] private GameObject note;
     [SerializeField] private GameObject top;
+    [SerializeField] private GameObject song;
 
     private int perfectPlusScore = 1000;
     private int perfectScore = 800;
@@ -154,6 +155,8 @@ public class Note : MonoBehaviour
     {
         if (gameManager.GetComponent<BeatScroller>().gameActive == true)
         {
+            song.SetActive(true);
+
             UI.SetActive(true);
 
             Pressing();
