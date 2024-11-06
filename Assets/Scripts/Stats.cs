@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -16,6 +17,11 @@ public class Stats : MonoBehaviour
 
     [SerializeField] private GameObject gameManager;
     [SerializeField] private GameObject stats;
+
+    public List<string> blueNotes;
+    public List<string> yellowNotes;
+    public List<string> greenNotes;
+    public List<string> redNotes;
 
     void Start()
     {

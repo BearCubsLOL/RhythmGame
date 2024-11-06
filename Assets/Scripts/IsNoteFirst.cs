@@ -1,84 +1,71 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class IsNoteFirst : MonoBehaviour
 {
-    public string[] blueNotes;
-    public string[] yellowNotes;
-    public string[] greenNotes;
-    public string[] redNotes;
-    public int neededBluePos;
-    public int neededYellowPos;
-    public int neededGreenPos;
-    public int neededRedPos;
-
     [SerializeField] private GameObject note;
+    [SerializeField] private GameObject gameManager;
 
     void ArrayAssign()
     {
-        if (transform.position.z == 3.5)
+        if (!(gameManager.GetComponent<Stats>().blueNotes.Contains(note.name) || gameManager.GetComponent<Stats>().yellowNotes.Contains(note.name) || gameManager.GetComponent<Stats>().greenNotes.Contains(note.name) || gameManager.GetComponent<Stats>().redNotes.Contains(note.name)))
         {
-            if (blueNotes.Length == 0)
+            if (note.transform.position.x > 6.5)
             {
-                blueNotes[blueNotes.Length] = note.name;
-            }
-            else
-            {
-                blueNotes[blueNotes.Length - 1] = note.name;
-            }
-        }
-        if (transform.position.z == 1.125)
-        {
-            if (yellowNotes.Length == 0)
-            {
-                yellowNotes[yellowNotes.Length] = note.name;
-            }
-            else
-            {
-                yellowNotes[yellowNotes.Length - 1] = note.name;
-            }
-        }
-        if (transform.position.z == -1.125)
-        {
-            if (greenNotes.Length == 0)
-            {
-                greenNotes[greenNotes.Length] = note.name;
-            }
-            else
-            {
-                greenNotes[greenNotes.Length - 1] = note.name;
-            }
-        }
-        if (transform.position.z == -3.5)
-        {
-            if (redNotes.Length == 0)
-            {
-                redNotes[redNotes.Length] = note.name;
-            }
-            else
-            {
-                redNotes[redNotes.Length - 1] = note.name;
+                if (transform.position.z == 3.5)
+                {
+                    gameManager.GetComponent<Stats>().blueNotes.Add(note.name);
+                }
+                if (transform.position.z == 1.125)
+                {
+                    gameManager.GetComponent<Stats>().yellowNotes.Add(note.name);
+                }
+                if (transform.position.z == -1.125)
+                {
+                    gameManager.GetComponent<Stats>().greenNotes.Add(note.name);
+                }
+                if (transform.position.z == -3.5)
+                {
+                    gameManager.GetComponent<Stats>().redNotes.Add(note.name);
+                }
             }
         }
     }
 
     void FrontCheck()
     {
+        gameManager.GetComponent<Stats>().blueNotes.Sort();
+        gameManager.GetComponent<Stats>().yellowNotes.Sort();
+        gameManager.GetComponent<Stats>().greenNotes.Sort();
+        gameManager.GetComponent<Stats>().redNotes.Sort();
         ArrayAssign();
-        if (blueNotes[neededBluePos] == note.name)
+        if (gameManager.GetComponent<Stats>().blueNotes.Count >= 1)
         {
-            note.GetComponent<Note>().isFront = true;
+            if (note.name == gameManager.GetComponent<Stats>().blueNotes[0])
+            {
+                note.GetComponent<Note>().isFront = true;
+            }
         }
-        if (yellowNotes[neededYellowPos] == note.name)
+        if (gameManager.GetComponent<Stats>().yellowNotes.Count >= 1)
         {
-            note.GetComponent<Note>().isFront = true;
+            if (note.name == gameManager.GetComponent<Stats>().yellowNotes[0])
+            {
+                note.GetComponent<Note>().isFront = true;
+            }
         }
-        if (greenNotes[neededGreenPos] == note.name)
+        if (gameManager.GetComponent<Stats>().greenNotes.Count >= 1)
         {
-            note.GetComponent<Note>().isFront = true;
+            if (note.name == gameManager.GetComponent<Stats>().greenNotes[0])
+            {
+                note.GetComponent<Note>().isFront = true;
+            }
         }
-        if (redNotes[neededRedPos] == note.name)
+        if (gameManager.GetComponent<Stats>().redNotes.Count >= 1)
         {
-            note.GetComponent<Note>().isFront = true;
+            if (note.name == gameManager.GetComponent<Stats>().redNotes[0])
+            {
+                note.GetComponent<Note>().isFront = true;
+            }
         }
     }
 

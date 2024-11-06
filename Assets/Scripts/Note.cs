@@ -64,22 +64,18 @@ public class Note : MonoBehaviour
             if (transform.position.z == 3.5)
             {
                 Object.Destroy(note);
-                note.GetComponent<IsNoteFirst>().neededBluePos -= 1;
             }
             if (transform.position.z == 1.125)
             {
                 Object.Destroy(note);
-                note.GetComponent<IsNoteFirst>().neededYellowPos -= 1;
             }
             if (transform.position.z == -1.125)
             {
                 Object.Destroy(note);
-                note.GetComponent<IsNoteFirst>().neededGreenPos -= 1;
             }
             if (transform.position.z == -3.5)
             {
                 Object.Destroy(note);
-                note.GetComponent<IsNoteFirst>().neededRedPos -= 1;
             }
         }
     }
@@ -88,28 +84,28 @@ public class Note : MonoBehaviour
     {
         if (canBePressed)
         {
-            if (Input.GetKey(KeyCode.D) && transform.position.z == 3.5 && isFront)
+            if (Input.GetKeyUp(KeyCode.D) && transform.position.z == 3.5 && isFront)
             {
                 wasPressed = true;
-                note.GetComponent<IsNoteFirst>().neededBluePos += 1;
+                gameManager.GetComponent<Stats>().blueNotes.Remove(note.name);
                 anim.SetTrigger("Active");
             }
-            if (Input.GetKey(KeyCode.F) && transform.position.z == 1.125 && isFront)
+            if (Input.GetKeyUp(KeyCode.F) && transform.position.z == 1.125 && isFront)
             {
                 wasPressed = true;
-                note.GetComponent<IsNoteFirst>().neededYellowPos += 1;
+                gameManager.GetComponent<Stats>().yellowNotes.Remove(note.name);
                 anim.SetTrigger("Active");
             }
-            if (Input.GetKey(KeyCode.J) && transform.position.z == -1.125 && isFront)
+            if (Input.GetKeyUp(KeyCode.J) && transform.position.z == -1.125 && isFront)
             {
                 wasPressed = true;
-                note.GetComponent<IsNoteFirst>().neededGreenPos += 1;
+                gameManager.GetComponent<Stats>().greenNotes.Remove(note.name);
                 anim.SetTrigger("Active");
             }
-            if (Input.GetKey(KeyCode.K) && transform.position.z == -3.5 && isFront)
+            if (Input.GetKeyUp(KeyCode.K) && transform.position.z == -3.5 && isFront)
             {
                 wasPressed = true;
-                note.GetComponent<IsNoteFirst>().neededRedPos += 1;
+                gameManager.GetComponent<Stats>().redNotes.Remove(note.name);
                 anim.SetTrigger("Active");
             }
         } 

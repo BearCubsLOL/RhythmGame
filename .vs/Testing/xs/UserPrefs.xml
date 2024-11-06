@@ -3,8 +3,8 @@
     <Files>
       <File FileName="Assets/Scripts/Countdown.cs" Line="20" Column="2" IsPinned="True" />
       <File FileName="Assets/Scripts/IsNoteFirst.cs" Line="87" Column="22" />
-      <File FileName="Assets/Scripts/Note.cs" Line="91" Column="78" />
-      <File FileName="Assets/Scripts/Stats.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Note.cs" />
+      <File FileName="Assets/Scripts/Stats.cs" />
       <File FileName="Assets/Scripts/BeatScroller.cs" />
       <File FileName="Assets/Scripts/UI.cs" />
       <File FileName="Assets/Scripts/SceneSwitcher.cs" />
@@ -13,10 +13,8 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Testing" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="IsNoteFirst.cs" selected="True" />
-              </Node>
+            <Node name="Assets" expanded="True" selected="True">
+              <Node name="Scripts" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -25,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6e5d963f-d9c0-4ce1-ac97-25deb13515f3" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c2fb0b77-1542-4ddb-896f-388113d41571" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
