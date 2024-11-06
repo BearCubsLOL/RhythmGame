@@ -84,25 +84,25 @@ public class Note : MonoBehaviour
     {
         if (canBePressed)
         {
-            if (Input.GetKeyUp(KeyCode.D) && transform.position.z == 3.5 && isFront)
+            if (Input.GetKeyDown(KeyCode.D) && transform.position.z == 3.5 && isFront)
             {
                 wasPressed = true;
                 gameManager.GetComponent<Stats>().blueNotes.Remove(note.name);
                 anim.SetTrigger("Active");
             }
-            if (Input.GetKeyUp(KeyCode.F) && transform.position.z == 1.125 && isFront)
+            if (Input.GetKeyDown(KeyCode.F) && transform.position.z == 1.125 && isFront)
             {
                 wasPressed = true;
                 gameManager.GetComponent<Stats>().yellowNotes.Remove(note.name);
                 anim.SetTrigger("Active");
             }
-            if (Input.GetKeyUp(KeyCode.J) && transform.position.z == -1.125 && isFront)
+            if (Input.GetKeyDown(KeyCode.J) && transform.position.z == -1.125 && isFront)
             {
                 wasPressed = true;
                 gameManager.GetComponent<Stats>().greenNotes.Remove(note.name);
                 anim.SetTrigger("Active");
             }
-            if (Input.GetKeyUp(KeyCode.K) && transform.position.z == -3.5 && isFront)
+            if (Input.GetKeyDown(KeyCode.K) && transform.position.z == -3.5 && isFront)
             {
                 wasPressed = true;
                 gameManager.GetComponent<Stats>().redNotes.Remove(note.name);
