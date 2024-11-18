@@ -1,20 +1,24 @@
 ﻿<Properties StartupConfiguration="{36ED1CE3-772E-F3DE-3FE9-21977164E909}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/IsNoteFirst.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NoteSpawner.cs">
     <Files>
       <File FileName="Assets/Scripts/Countdown.cs" Line="20" Column="2" IsPinned="True" />
-      <File FileName="Assets/Scripts/IsNoteFirst.cs" Line="87" Column="22" />
-      <File FileName="Assets/Scripts/Note.cs" />
+      <File FileName="Assets/Scripts/IsNoteFirst.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Note.cs" Line="1" Column="2" />
       <File FileName="Assets/Scripts/Stats.cs" />
-      <File FileName="Assets/Scripts/BeatScroller.cs" />
+      <File FileName="Assets/Scripts/BeatScroller.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/UI.cs" />
+      <File FileName="Assets/Scripts/NoteSpawner.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/SceneSwitcher.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Testing" expanded="True">
-            <Node name="Assets" expanded="True" selected="True">
-              <Node name="Scripts" expanded="True" />
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="NoteSpawner.cs" selected="True" />
+              </Node>
+              <Node name="Songs" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -23,7 +27,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c2fb0b77-1542-4ddb-896f-388113d41571" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e761fe89-4ea5-4dac-a64e-2151b3e8909a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

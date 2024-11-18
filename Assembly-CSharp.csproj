@@ -67,11 +67,13 @@
     <Compile Include="Assets/Scripts/SceneSwitcher.cs" />
     <Compile Include="Assets/Scripts/UI.cs" />
     <Compile Include="Assets/Scripts/Note.cs" />
+    <Compile Include="Assets/Scripts/NoteSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Fonts/TextMesh Pro/Shaders/TMPro.cginc" />
     <None Include="Assets/Fonts/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets/Fonts/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
+    <None Include="Assets/Songs/JSON/ThickOfIt.txt" />
     <None Include="Assets/Fonts/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
     <None Include="Assets/Fonts/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
     <None Include="Assets/Fonts/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />

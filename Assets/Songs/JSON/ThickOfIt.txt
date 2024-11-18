@@ -1,0 +1,8 @@
+{
+    colorSequence: {
+        "note1": "blue";
+    }
+    time: {
+        "note1": 1;
+    }
+}
