@@ -1,18 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class NoteSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public TextAsset jsonFile;
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Debug.Log(jsonFile);
     }
 }
