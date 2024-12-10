@@ -8,6 +8,8 @@ TagManager:
   - Note
   - Last Note
   - Main Menu
+  - Last HoldNote
+  - HoldNote
   layers:
   - Default
   - TransparentFX

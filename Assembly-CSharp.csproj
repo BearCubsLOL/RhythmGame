@@ -63,6 +63,7 @@
     <Compile Include="Assets/Scripts/BeatScroller.cs" />
     <Compile Include="Assets/Scripts/IsNoteFirst.cs" />
     <Compile Include="Assets/Scripts/Stats.cs" />
+    <Compile Include="Assets/Scripts/HoldNote.cs" />
     <Compile Include="Assets/Scripts/Countdown.cs" />
     <Compile Include="Assets/Scripts/SceneSwitcher.cs" />
     <Compile Include="Assets/Scripts/UI.cs" />

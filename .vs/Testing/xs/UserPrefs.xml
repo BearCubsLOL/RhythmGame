@@ -1,14 +1,15 @@
 ﻿<Properties StartupConfiguration="{36ED1CE3-772E-F3DE-3FE9-21977164E909}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NoteSpawner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HoldNote.cs">
     <Files>
       <File FileName="Assets/Scripts/Countdown.cs" Line="20" Column="2" IsPinned="True" />
       <File FileName="Assets/Scripts/IsNoteFirst.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/NoteSpawner.cs" Line="9" Column="9" />
-      <File FileName="Assets/Scripts/Note.cs" />
-      <File FileName="Assets/Scripts/Stats.cs" />
-      <File FileName="Assets/Scripts/BeatScroller.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/NoteSpawner.cs" Line="25" Column="36" />
+      <File FileName="Assets/Scripts/Note.cs" Line="42" Column="10" />
+      <File FileName="Assets/Scripts/Stats.cs" Line="1" Column="34" />
+      <File FileName="Assets/Scripts/BeatScroller.cs" Line="21" Column="10" />
+      <File FileName="Assets/Scripts/HoldNote.cs" Line="17" Column="6" />
       <File FileName="Assets/Scripts/UI.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SceneSwitcher.cs" />
+      <File FileName="Assets/Scripts/SceneSwitcher.cs" Line="8" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,7 +17,7 @@
           <Node name="Testing" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="NoteSpawner.cs" selected="True" />
+                <Node name="HoldNote.cs" selected="True" />
               </Node>
             </Node>
           </Node>
