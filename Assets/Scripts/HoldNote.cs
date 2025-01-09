@@ -89,7 +89,6 @@ public class HoldNote : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.D) && transform.position.z == 3.5 && isHoldFront)
             {
-                print("hi");
                 wasPressed = true;
                 pressDistance = transform.position.x;
                 gameManager.GetComponent<Stats>().blueNotes.Remove(holdNote.name);
