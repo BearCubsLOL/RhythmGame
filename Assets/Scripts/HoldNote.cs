@@ -14,6 +14,8 @@ public class HoldNote : MonoBehaviour
     private float pressDistance = 0f;
     private float releaseDistance = 0f;
 
+    private float len = 3f;
+
     [SerializeField] private GameObject UI;
     [SerializeField] private GameObject holdNote;
     [SerializeField] private GameObject holdNoteTop;
@@ -55,6 +57,7 @@ public class HoldNote : MonoBehaviour
                 UI.GetComponent<UI>().streak = 0;
                 UI.GetComponent<UI>().multiplier = 0;
                 gameManager.GetComponent<Stats>().missedHits += 1;
+                gameManager.GetComponent<Stats>().blueNotes.Remove(holdNote.name);
             }
             else
             {
@@ -86,7 +89,55 @@ public class HoldNote : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.D) && transform.position.z == 3.5 && isHoldFront)
             {
-
+                print("hi");
+                wasPressed = true;
+                pressDistance = transform.position.x;
+                gameManager.GetComponent<Stats>().blueNotes.Remove(holdNote.name);
+                anim.SetTrigger("Holding");
+            }
+            if (Input.GetKeyDown(KeyCode.F) && transform.position.z == 1.125 && isHoldFront)
+            {
+                wasPressed = true;
+                pressDistance = transform.position.x;
+                gameManager.GetComponent<Stats>().yellowNotes.Remove(holdNote.name);
+                anim.SetTrigger("Holding");
+            }
+            if (Input.GetKeyDown(KeyCode.J) && transform.position.z == -1.125 && isHoldFront)
+            {
+                wasPressed = true;
+                pressDistance = transform.position.x;
+                gameManager.GetComponent<Stats>().greenNotes.Remove(holdNote.name);
+                anim.SetTrigger("Holding");
+            }
+            if (Input.GetKeyDown(KeyCode.K) && transform.position.z == -3.5 && isHoldFront)
+            {
+                wasPressed = true;
+                pressDistance = transform.position.x;
+                gameManager.GetComponent<Stats>().redNotes.Remove(holdNote.name);
+                anim.SetTrigger("Holding");
+            }
+        }
+        if (wasPressed)
+        {
+            if (transform.position.x - pressDistance >= len)
+            {
+                releaseDistance = transform.position.x;
+            }
+            if (Input.GetKeyUp(KeyCode.D) && transform.position.z == 3.5)
+            {
+                releaseDistance = transform.position.x;
+            }
+            if (Input.GetKeyUp(KeyCode.F) && transform.position.z == 1.125)
+            {
+                releaseDistance = transform.position.x;
+            }
+            if (Input.GetKeyUp(KeyCode.J) && transform.position.z == -1.125)
+            {
+                releaseDistance = transform.position.x;
+            }
+            if (Input.GetKeyUp(KeyCode.K) && transform.position.z == -3.5)
+            {
+                releaseDistance = transform.position.x;
             }
         }
     }

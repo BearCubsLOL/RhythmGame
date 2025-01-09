@@ -1,24 +1,22 @@
 ﻿<Properties StartupConfiguration="{36ED1CE3-772E-F3DE-3FE9-21977164E909}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HoldNote.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NoteSpawner.cs">
     <Files>
       <File FileName="Assets/Scripts/Countdown.cs" Line="20" Column="2" IsPinned="True" />
-      <File FileName="Assets/Scripts/IsNoteFirst.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/IsNoteFirst.cs" />
       <File FileName="Assets/Scripts/NoteSpawner.cs" Line="25" Column="36" />
-      <File FileName="Assets/Scripts/Note.cs" Line="42" Column="10" />
-      <File FileName="Assets/Scripts/Stats.cs" Line="1" Column="34" />
-      <File FileName="Assets/Scripts/BeatScroller.cs" Line="21" Column="10" />
-      <File FileName="Assets/Scripts/HoldNote.cs" Line="17" Column="6" />
-      <File FileName="Assets/Scripts/UI.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SceneSwitcher.cs" Line="8" Column="9" />
+      <File FileName="Assets/Scripts/Note.cs" />
+      <File FileName="Assets/Scripts/HoldNote.cs" Line="49" Column="1" />
+      <File FileName="Assets/Scripts/Stats.cs" />
+      <File FileName="Assets/Scripts/BeatScroller.cs" />
+      <File FileName="Assets/Scripts/UI.cs" />
+      <File FileName="Assets/Scripts/SceneSwitcher.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Testing" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="HoldNote.cs" selected="True" />
-              </Node>
+            <Node name="Assets" expanded="True" selected="True">
+              <Node name="Scripts" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -27,7 +25,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c124a636-590f-4b2d-9a30-deb20a0360ee" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1fd35124-a217-4cd4-b44e-93b1a85f95f7" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

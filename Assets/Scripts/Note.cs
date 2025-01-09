@@ -55,6 +55,7 @@ public class Note : MonoBehaviour
                 UI.GetComponent<UI>().streak = 0;
                 UI.GetComponent<UI>().multiplier = 0;
                 gameManager.GetComponent<Stats>().missedHits += 1;
+                gameManager.GetComponent<Stats>().blueNotes.Remove(note.name);
             }
             else
             {
