@@ -125,7 +125,7 @@ public class HoldNote : MonoBehaviour
                 distance = centerOfBoard - (transform.position.x - (.5f * len) - .5f);
                 distance = Mathf.Abs(distance);
             }
-            if (Input.GetKeyDown(KeyCode.K) && notes.transform.position.z == -3.5 && isHoldFront)
+            if (Input.GetKeyDown(KeyCode.K) && transform.position.z == -3.5 && isHoldFront)
             {
                 wasPressed = true;
                 pressDistance = -notes.transform.position.x;
