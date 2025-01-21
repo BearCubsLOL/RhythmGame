@@ -131,21 +131,21 @@ public class Note : MonoBehaviour
             else if (distance > 0.25 && distance <= 0.5)
             {
                 Debug.Log("Perfect");
-                UI.GetComponent<UI>().score += perfectScore;
+                UI.GetComponent<UI>().score += perfectScore * UI.GetComponent<UI>().multiplier;
                 UI.GetComponent<UI>().streak += 1;
                 gameManager.GetComponent<Stats>().perfectHits += 1;
             }
             else if (distance > 0.5 && distance <= 0.75)
             {
                 Debug.Log("Great");
-                UI.GetComponent<UI>().score += greatScore;
+                UI.GetComponent<UI>().score += greatScore * UI.GetComponent<UI>().multiplier;
                 UI.GetComponent<UI>().streak += 1;
                 gameManager.GetComponent<Stats>().greatHits += 1;
             }
             else if (distance > 0.75)
             {
                 Debug.Log("Good");
-                UI.GetComponent<UI>().score += goodScore;
+                UI.GetComponent<UI>().score += goodScore * UI.GetComponent<UI>().multiplier;
                 UI.GetComponent<UI>().streak += 1;
                 gameManager.GetComponent<Stats>().goodHits += 1;
             }

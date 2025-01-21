@@ -718,6 +718,27 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -3133498875991405556, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
   m_PrefabInstance: {fileID: 581867344}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &274537728
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274537724}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 1.9999998, z: 1.9999996}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &281320426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,7 +1090,9 @@ MonoBehaviour:
   isHoldFront: 0
   trigger: {fileID: 20527926}
   wasPressed: 0
+  wasReleased: 0
   gameManager: {fileID: 885608018}
+  notes: {fileID: 929190898}
   UI: {fileID: 1326950071}
   holdNote: {fileID: 393616186}
   holdNoteTop: {fileID: 1071193462}
@@ -1095,6 +1118,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &393616191
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393616186}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &444064893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,6 +1404,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 085056ef59ac94a24a8d59f833afd69c, type: 2}
+    - target: {fileID: 533193074659131909, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
       propertyPath: m_Name
       value: Blue Note (2)
@@ -1367,6 +1415,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
       propertyPath: m_TagString
       value: HoldNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908160863352278831, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.75
       objectReference: {fileID: 0}
     - target: {fileID: 5908160863352278831, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1385,39 +1437,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2000432723}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2000432724}
   m_SourcePrefab: {fileID: 100100000, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
---- !u!1 &513255251
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 513255252}
-  m_Layer: 0
-  m_Name: All Notes
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &513255252
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513255251}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 929190899}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &526629671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,7 +1585,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.17
+      value: 43.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1608,6 +1631,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 085056ef59ac94a24a8d59f833afd69c, type: 2}
+    - target: {fileID: 533193074659131909, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
       propertyPath: m_Name
       value: Yellow Note(1)
@@ -1615,6 +1642,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
       propertyPath: m_TagString
       value: HoldNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908160863352278831, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1629,6 +1660,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
       insertIndex: -1
       addedObject: {fileID: 393616190}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 393616191}
+    - targetCorrespondingSourceObject: {fileID: -3133498875991405556, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 274537728}
   m_SourcePrefab: {fileID: 100100000, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
 --- !u!1 &583748601 stripped
 GameObject:
@@ -1670,7 +1707,9 @@ MonoBehaviour:
   isHoldFront: 0
   trigger: {fileID: 20527926}
   wasPressed: 0
+  wasReleased: 0
   gameManager: {fileID: 885608018}
+  notes: {fileID: 929190898}
   UI: {fileID: 1326950071}
   holdNote: {fileID: 583748601}
   holdNoteTop: {fileID: 1851398344}
@@ -1696,6 +1735,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &583748606
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583748601}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &586864396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2248,7 +2308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa27a200a5d9a479c9bed4aeac6b7d2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteSpeed: 10
+  noteSpeed: 4
   notes: {fileID: 929190898}
   gameActive: 0
   gameOver: 0
@@ -2339,7 +2399,7 @@ Transform:
   - {fileID: 814616704}
   - {fileID: 1313565755}
   - {fileID: 1129619622}
-  m_Father: {fileID: 513255252}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &937905827
 PrefabInstance:
@@ -2416,6 +2476,27 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -3133498875991405556, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
   m_PrefabInstance: {fileID: 1679618823}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &949491272
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949491268}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 1.9999998, z: 1.9999996}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3282,7 +3363,9 @@ MonoBehaviour:
   isHoldFront: 0
   trigger: {fileID: 20527926}
   wasPressed: 0
+  wasReleased: 0
   gameManager: {fileID: 885608018}
+  notes: {fileID: 929190898}
   UI: {fileID: 1326950071}
   holdNote: {fileID: 1194660586}
   holdNoteTop: {fileID: 21355980}
@@ -3308,6 +3391,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &1194660591
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194660586}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1284416282
 GameObject:
   m_ObjectHideFlags: 0
@@ -4258,7 +4362,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.17
+      value: 49.28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4304,6 +4408,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 085056ef59ac94a24a8d59f833afd69c, type: 2}
+    - target: {fileID: 533193074659131909, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
       propertyPath: m_Name
       value: Red Note
@@ -4311,6 +4419,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
       propertyPath: m_TagString
       value: HoldNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908160863352278831, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4325,6 +4437,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
       insertIndex: -1
       addedObject: {fileID: 583748605}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 583748606}
+    - targetCorrespondingSourceObject: {fileID: -3133498875991405556, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 949491272}
   m_SourcePrefab: {fileID: 100100000, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
 --- !u!4 &1763110853 stripped
 Transform:
@@ -4341,7 +4459,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.17
+      value: 33.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4387,6 +4505,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 085056ef59ac94a24a8d59f833afd69c, type: 2}
+    - target: {fileID: 533193074659131909, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
       propertyPath: m_Name
       value: Green Note(1)
@@ -4394,6 +4516,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
       propertyPath: m_TagString
       value: HoldNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908160863352278831, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4408,6 +4534,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1194660590}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1194660591}
   m_SourcePrefab: {fileID: 100100000, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
 --- !u!4 &1845052234 stripped
 Transform:
@@ -4901,7 +5030,9 @@ MonoBehaviour:
   isHoldFront: 0
   trigger: {fileID: 20527926}
   wasPressed: 0
+  wasReleased: 0
   gameManager: {fileID: 885608018}
+  notes: {fileID: 929190898}
   UI: {fileID: 1326950071}
   holdNote: {fileID: 2000432719}
   holdNoteTop: {fileID: 2025585020}
@@ -4927,6 +5058,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &2000432724
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000432719}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2025585020 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 243041194690276544, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
@@ -5387,4 +5539,4 @@ SceneRoots:
   - {fileID: 361132420}
   - {fileID: 20527930}
   - {fileID: 1543321269}
-  - {fileID: 513255252}
+  - {fileID: 929190899}

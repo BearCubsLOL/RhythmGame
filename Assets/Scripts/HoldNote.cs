@@ -8,11 +8,17 @@ public class HoldNote : MonoBehaviour
     public bool isHoldFront = false;
     [SerializeField] private GameObject trigger;
     [SerializeField] private bool wasPressed = false;
+    [SerializeField] private bool wasReleased = false;
     [SerializeField] private GameObject gameManager;
+    [SerializeField] private GameObject notes;
     private bool alreadyRan = false;
 
     private float pressDistance = 0f;
     private float releaseDistance = 0f;
+    private float distance;
+    private float addingScore; 
+    private float score;
+    private float centerOfBoard = 5f;
 
     private float len = 3f;
 
@@ -20,6 +26,11 @@ public class HoldNote : MonoBehaviour
     [SerializeField] private GameObject holdNote;
     [SerializeField] private GameObject holdNoteTop;
     [SerializeField] private GameObject holdNoteBase;
+
+    private int perfectPlusScore = 1000;
+    private int perfectScore = 800;
+    private int greatScore = 600;
+    private int goodScore = 500;
 
 
 
@@ -90,63 +101,137 @@ public class HoldNote : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.D) && transform.position.z == 3.5 && isHoldFront)
             {
                 wasPressed = true;
-                pressDistance = transform.position.x;
+                pressDistance = -notes.transform.position.x;
                 gameManager.GetComponent<Stats>().blueNotes.Remove(holdNote.name);
                 anim.SetTrigger("Holding");
+                distance = centerOfBoard - (transform.position.x - (.5f * len) - .5f);
+                distance = Mathf.Abs(distance);
             }
             if (Input.GetKeyDown(KeyCode.F) && transform.position.z == 1.125 && isHoldFront)
             {
                 wasPressed = true;
-                pressDistance = transform.position.x;
+                pressDistance = -notes.transform.position.x;
                 gameManager.GetComponent<Stats>().yellowNotes.Remove(holdNote.name);
                 anim.SetTrigger("Holding");
+                distance = centerOfBoard - (transform.position.x - (.5f * len) - .5f);
+                distance = Mathf.Abs(distance);
             }
             if (Input.GetKeyDown(KeyCode.J) && transform.position.z == -1.125 && isHoldFront)
             {
                 wasPressed = true;
-                pressDistance = transform.position.x;
+                pressDistance = -notes.transform.position.x;
                 gameManager.GetComponent<Stats>().greenNotes.Remove(holdNote.name);
                 anim.SetTrigger("Holding");
+                distance = centerOfBoard - (transform.position.x - (.5f * len) - .5f);
+                distance = Mathf.Abs(distance);
             }
-            if (Input.GetKeyDown(KeyCode.K) && transform.position.z == -3.5 && isHoldFront)
+            if (Input.GetKeyDown(KeyCode.K) && notes.transform.position.z == -3.5 && isHoldFront)
             {
                 wasPressed = true;
-                pressDistance = transform.position.x;
+                pressDistance = -notes.transform.position.x;
                 gameManager.GetComponent<Stats>().redNotes.Remove(holdNote.name);
                 anim.SetTrigger("Holding");
+                distance = centerOfBoard - (transform.position.x - (.5f * len) - .5f);
+                distance = Mathf.Abs(distance);
             }
         }
         if (wasPressed)
         {
-            if (transform.position.x - pressDistance >= len)
+            if (-notes.transform.position.x - pressDistance >= len)
             {
-                releaseDistance = transform.position.x;
+                releaseDistance = pressDistance + len;
+                wasReleased = true;
             }
             if (Input.GetKeyUp(KeyCode.D) && transform.position.z == 3.5)
             {
-                releaseDistance = transform.position.x;
+                releaseDistance = notes.transform.position.x;
+                wasReleased = true;
             }
             if (Input.GetKeyUp(KeyCode.F) && transform.position.z == 1.125)
             {
-                releaseDistance = transform.position.x;
+                releaseDistance = notes.transform.position.x;
+                wasReleased = true;
             }
             if (Input.GetKeyUp(KeyCode.J) && transform.position.z == -1.125)
             {
-                releaseDistance = transform.position.x;
+                releaseDistance = notes.transform.position.x;
+                wasReleased = true;
             }
             if (Input.GetKeyUp(KeyCode.K) && transform.position.z == -3.5)
             {
-                releaseDistance = transform.position.x;
+                releaseDistance = notes.transform.position.x;
+                wasReleased = true;
             }
         }
     }
 
     public void ScoreSystem()
     {
-        if (wasPressed && !alreadyRan)
+        if (wasReleased && !alreadyRan)
         {
             alreadyRan = true;
-            
+            print(distance);
+
+            if (distance <= 0.25)
+            {
+                Debug.Log("Perfect+");
+                UI.GetComponent<UI>().streak += 1;
+                gameManager.GetComponent<Stats>().perfectPlusHits += 1;
+                addingScore = releaseDistance - pressDistance;
+                if (addingScore - Mathf.Round(addingScore) == .5f)
+                {
+                    score += (Mathf.Round(addingScore) + 1) * perfectPlusScore * UI.GetComponent<UI>().multiplier;
+                }
+                else
+                {
+                    score += Mathf.Round(addingScore) * perfectPlusScore * UI.GetComponent<UI>().multiplier;
+                }
+            }
+            else if (distance > 0.25 && distance <= 0.5)
+            {
+                Debug.Log("Perfect");
+                UI.GetComponent<UI>().streak += 1;
+                gameManager.GetComponent<Stats>().perfectHits += 1;
+                addingScore = releaseDistance - pressDistance;
+                if (addingScore - Mathf.Round(addingScore) == .5f)
+                {
+                    score += (Mathf.Round(addingScore) + 1) * perfectScore * UI.GetComponent<UI>().multiplier;
+                }
+                else
+                {
+                    score += Mathf.Round(addingScore) * perfectScore * UI.GetComponent<UI>().multiplier;
+                }
+            }
+            else if (distance > 0.5 && distance <= 0.75)
+            {
+                Debug.Log("Great");
+                UI.GetComponent<UI>().streak += 1;
+                gameManager.GetComponent<Stats>().greatHits += 1;
+                addingScore = releaseDistance - pressDistance;
+                if (addingScore - Mathf.Round(addingScore) == .5f)
+                {
+                    score += (Mathf.Round(addingScore) + 1) * greatScore * UI.GetComponent<UI>().multiplier;
+                }
+                else
+                {
+                    score += Mathf.Round(addingScore) * greatScore * UI.GetComponent<UI>().multiplier;
+                }
+            }
+            else if (distance > 0.75)
+            {
+                Debug.Log("Good");
+                UI.GetComponent<UI>().streak += 1;
+                gameManager.GetComponent<Stats>().goodHits += 1;
+                addingScore = releaseDistance - pressDistance;
+                if (addingScore - Mathf.Round(addingScore) == .5f)
+                {
+                    score += (Mathf.Round(addingScore) + 1) * goodScore * UI.GetComponent<UI>().multiplier;
+                }
+                else
+                {
+                    score += Mathf.Round(addingScore) * goodScore * UI.GetComponent<UI>().multiplier;
+                }
+            }
         }
     }
 
