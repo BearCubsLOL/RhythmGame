@@ -5,6 +5,12 @@ public class NoteSpawner : MonoBehaviour
     public TextAsset[] jsonFiles;
     private TextAsset currentJsonFile;
 
+    // Note Prefabs
+    [SerializeField] private GameObject bluePrefab;
+    [SerializeField] private GameObject yellowPrefab;
+    [SerializeField] private GameObject greenPrefab;
+    [SerializeField] private GameObject redPrefab;
+
     [System.Serializable]
     private class NoteArray
     {
@@ -31,21 +37,25 @@ public class NoteSpawner : MonoBehaviour
         currentJsonFile = jsonFiles[0];
     }
 
-    void MakeObject()
-    {
-        AssignCurrentFile();
-
-        NoteArray notes = JsonUtility.FromJson<NoteArray>(currentJsonFile.ToString());
-        Debug.Log(JsonUtility.ToJson(notes));
-    }
-
     void SpawnNotes()
     {
-
+        NoteArray notes = JsonUtility.FromJson<NoteArray>(currentJsonFile.ToString());
+        Debug.Log(notes.notes[1]);
+        foreach (Note note in notes.notes)
+        {
+            if (note.time_up != null)
+            {
+                if (note.key == "left")
+                {
+                    var spawn = Instantiate(bluePrefab, new Vector3(float.Parse(note.time_down), 0.8f, 3.5f), Quaternion.identity);
+                }
+            }
+        }
     }
 
     void Start()
     {
-        MakeObject();
+        AssignCurrentFile();
+        SpawnNotes();
     }
 }
