@@ -10,6 +10,7 @@ TagManager:
   - Main Menu
   - Last HoldNote
   - HoldNote
+  - NotePrefab
   layers:
   - Default
   - TransparentFX

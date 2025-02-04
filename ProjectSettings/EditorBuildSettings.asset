@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Level Select/Level Select.unity
     guid: 77ed2e31aaafc42f183a31e8c716c229
   - enabled: 1
-    path: Assets/Scenes/Test Song/TestSong.unity
+    path: Assets/Scenes/Song/Song.unity
     guid: 3252ff11066014642bbb38992a8c9b82
   m_configObjects: {}

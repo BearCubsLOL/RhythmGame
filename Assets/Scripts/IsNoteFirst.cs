@@ -8,7 +8,7 @@ public class IsNoteFirst : MonoBehaviour
 
     void ArrayAssign()
     {
-        if (!(gameManager.GetComponent<Stats>().blueNotes.Contains(note.name) || gameManager.GetComponent<Stats>().yellowNotes.Contains(note.name) || gameManager.GetComponent<Stats>().greenNotes.Contains(note.name) || gameManager.GetComponent<Stats>().redNotes.Contains(note.name)))
+        if (!(gameManager.GetComponent<Stats>().blueNotes.Contains(note.name) || gameManager.GetComponent<Stats>().yellowNotes.Contains(note.name) || gameManager.GetComponent<Stats>().greenNotes.Contains(note.name) || gameManager.GetComponent<Stats>().redNotes.Contains(note.name)) && note.CompareTag("Note") || note.CompareTag("HoldNote"))
         {
             if (note.transform.position.x > 6.5)
             {
