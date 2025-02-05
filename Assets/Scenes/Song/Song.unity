@@ -1617,7 +1617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
       propertyPath: m_TagString
-      value: HoldNote
+      value: NotePrefab
       objectReference: {fileID: 0}
     - target: {fileID: 5908160863352278831, guid: ab0b5b3c4c5514f878b03cc4db530675, type: 3}
       propertyPath: m_LocalScale.x
@@ -2347,6 +2347,10 @@ MonoBehaviour:
   yellowPrefab: {fileID: 2090864129}
   greenPrefab: {fileID: 1634737490}
   redPrefab: {fileID: 1001239350}
+  blueHoldPrefab: {fileID: 2000432719}
+  yellowHoldPrefab: {fileID: 393616186}
+  greenHoldPrefab: {fileID: 1194660586}
+  redHoldPrefab: {fileID: 583748601}
   blueNotes: {fileID: 357972063}
   yellowNotes: {fileID: 814616703}
   greenNotes: {fileID: 1313565754}
