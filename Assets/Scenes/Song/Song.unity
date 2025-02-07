@@ -2284,7 +2284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa27a200a5d9a479c9bed4aeac6b7d2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteSpeed: 4
+  noteSpeed: 5
   notes: {fileID: 929190898}
   gameActive: 0
   gameOver: 0

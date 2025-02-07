@@ -103,7 +103,6 @@ public class NoteSpawner : MonoBehaviour
                 if (note.key == "Left")
                 {
                     blueNoteCount++;
-                    Debug.Log(note.time_up);
                     len = float.Parse(note.time_up) - float.Parse(note.time_down);
                     currentNote = Instantiate(blueHoldPrefab, new Vector3(float.Parse(note.time_up) - (len / 2) + 5f, 0.8f, 3.5f), Quaternion.identity);
                     currentNote.name = $"Blue Note ({blueNoteCount})";
@@ -115,11 +114,10 @@ public class NoteSpawner : MonoBehaviour
                         if (childTransform.name == "Base")
                         {
                             childTransform.transform.localScale = new Vector3(len, 1, 0.2f);
-
                         }
                         else
                         {
-                            childTransform.transform.localScale = new Vector3(len - .25f, 1, 0.2f);
+                            childTransform.transform.localScale = new Vector3(len - .25f, 0.75f, 0.1f);
                         }
                     }
 

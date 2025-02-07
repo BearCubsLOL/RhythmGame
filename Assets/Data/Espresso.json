@@ -63,7 +63,7 @@
         {
             "key": "Left",
             "time_down": "10.082",
-            "time_up": " "
+            "time_up": null
         },
         {
             "key": "Down",
