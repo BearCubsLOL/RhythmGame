@@ -16,8 +16,7 @@ public class HoldNote : MonoBehaviour
     private float pressDistance = 0f;
     private float releaseDistance = 0f;
     private float distance;
-    private float addingScore; 
-    private float score;
+    private float addingScore;
     private float centerOfBoard = 5f;
 
     private float len = 3f;
@@ -69,6 +68,9 @@ public class HoldNote : MonoBehaviour
                 UI.GetComponent<UI>().multiplier = 0;
                 gameManager.GetComponent<Stats>().missedHits += 1;
                 gameManager.GetComponent<Stats>().blueNotes.Remove(holdNote.name);
+                gameManager.GetComponent<Stats>().yellowNotes.Remove(holdNote.name);
+                gameManager.GetComponent<Stats>().greenNotes.Remove(holdNote.name);
+                gameManager.GetComponent<Stats>().redNotes.Remove(holdNote.name);
             }
             else
             {
@@ -144,22 +146,22 @@ public class HoldNote : MonoBehaviour
             }
             if (Input.GetKeyUp(KeyCode.D) && transform.position.z == 3.5)
             {
-                releaseDistance = notes.transform.position.x;
+                releaseDistance = -notes.transform.position.x;
                 wasReleased = true;
             }
             if (Input.GetKeyUp(KeyCode.F) && transform.position.z == 1.125)
             {
-                releaseDistance = notes.transform.position.x;
+                releaseDistance = -notes.transform.position.x;
                 wasReleased = true;
             }
             if (Input.GetKeyUp(KeyCode.J) && transform.position.z == -1.125)
             {
-                releaseDistance = notes.transform.position.x;
+                releaseDistance = -notes.transform.position.x;
                 wasReleased = true;
             }
             if (Input.GetKeyUp(KeyCode.K) && transform.position.z == -3.5)
             {
-                releaseDistance = notes.transform.position.x;
+                releaseDistance = -notes.transform.position.x;
                 wasReleased = true;
             }
         }
@@ -170,7 +172,6 @@ public class HoldNote : MonoBehaviour
         if (wasReleased && !alreadyRan)
         {
             alreadyRan = true;
-            print(distance);
 
             if (distance <= 0.25)
             {
@@ -180,11 +181,11 @@ public class HoldNote : MonoBehaviour
                 addingScore = releaseDistance - pressDistance;
                 if (addingScore - Mathf.Round(addingScore) == .5f)
                 {
-                    score += (Mathf.Round(addingScore) + 1) * perfectPlusScore * UI.GetComponent<UI>().multiplier;
+                    UI.GetComponent<UI>().score += Mathf.RoundToInt((Mathf.Round(addingScore) + 1) * perfectPlusScore * UI.GetComponent<UI>().multiplier);
                 }
                 else
                 {
-                    score += Mathf.Round(addingScore) * perfectPlusScore * UI.GetComponent<UI>().multiplier;
+                    UI.GetComponent<UI>().score += Mathf.RoundToInt(Mathf.Round(addingScore) * perfectPlusScore * UI.GetComponent<UI>().multiplier);
                 }
             }
             else if (distance > 0.25 && distance <= 0.5)
@@ -195,11 +196,11 @@ public class HoldNote : MonoBehaviour
                 addingScore = releaseDistance - pressDistance;
                 if (addingScore - Mathf.Round(addingScore) == .5f)
                 {
-                    score += (Mathf.Round(addingScore) + 1) * perfectScore * UI.GetComponent<UI>().multiplier;
+                    UI.GetComponent<UI>().score += Mathf.RoundToInt((Mathf.Round(addingScore) + 1) * perfectScore * UI.GetComponent<UI>().multiplier);
                 }
                 else
                 {
-                    score += Mathf.Round(addingScore) * perfectScore * UI.GetComponent<UI>().multiplier;
+                    UI.GetComponent<UI>().score += Mathf.RoundToInt(Mathf.Round(addingScore) * perfectScore * UI.GetComponent<UI>().multiplier);
                 }
             }
             else if (distance > 0.5 && distance <= 0.75)
@@ -210,11 +211,11 @@ public class HoldNote : MonoBehaviour
                 addingScore = releaseDistance - pressDistance;
                 if (addingScore - Mathf.Round(addingScore) == .5f)
                 {
-                    score += (Mathf.Round(addingScore) + 1) * greatScore * UI.GetComponent<UI>().multiplier;
+                    UI.GetComponent<UI>().score += Mathf.RoundToInt((Mathf.Round(addingScore) + 1) * greatScore * UI.GetComponent<UI>().multiplier);
                 }
                 else
                 {
-                    score += Mathf.Round(addingScore) * greatScore * UI.GetComponent<UI>().multiplier;
+                    UI.GetComponent<UI>().score += Mathf.RoundToInt(Mathf.Round(addingScore) * greatScore * UI.GetComponent<UI>().multiplier);
                 }
             }
             else if (distance > 0.75)
@@ -225,11 +226,11 @@ public class HoldNote : MonoBehaviour
                 addingScore = releaseDistance - pressDistance;
                 if (addingScore - Mathf.Round(addingScore) == .5f)
                 {
-                    score += (Mathf.Round(addingScore) + 1) * goodScore * UI.GetComponent<UI>().multiplier;
+                    UI.GetComponent<UI>().score += Mathf.RoundToInt((Mathf.Round(addingScore) + 1) * goodScore * UI.GetComponent<UI>().multiplier);
                 }
                 else
                 {
-                    score += Mathf.Round(addingScore) * goodScore * UI.GetComponent<UI>().multiplier;
+                    UI.GetComponent<UI>().score += Mathf.RoundToInt(Mathf.Round(addingScore) * goodScore * UI.GetComponent<UI>().multiplier);
                 }
             }
         }

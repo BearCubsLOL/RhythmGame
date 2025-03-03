@@ -56,6 +56,9 @@ public class Note : MonoBehaviour
                 UI.GetComponent<UI>().multiplier = 0;
                 gameManager.GetComponent<Stats>().missedHits += 1;
                 gameManager.GetComponent<Stats>().blueNotes.Remove(note.name);
+                gameManager.GetComponent<Stats>().yellowNotes.Remove(note.name);
+                gameManager.GetComponent<Stats>().greenNotes.Remove(note.name);
+                gameManager.GetComponent<Stats>().redNotes.Remove(note.name);
             }
             else
             {
